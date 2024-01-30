@@ -1,0 +1,8 @@
+{
+  "id": "pondupgrades",
+  "name": "Pond Upgrades",
+  "author": "Aidanamite",
+  "description": "Allows you to upgrade the Pond",
+  "version": "1.0.3",
+  "load_after": [ "slimeponds" ]
+}
