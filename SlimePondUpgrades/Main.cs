@@ -111,13 +111,17 @@ namespace PondUpgrades
         {
             var mult = 1;
             foreach (var w in __instance.waters)
-            {
-                var l = w.GetComponentInParent<LandPlot>();
-                if (l && l.HasUpgrade(Ids.POND_SLIME_CAPACITY) && mult < 2)
-                    mult = 2;
-                if (l && l.HasUpgrade(Ids.POND_ANCIENT_BLESSING) && mult < 6)
-                    mult = 6;
-            }
+                if (w)
+                {
+                    var l = w.GetComponentInParent<LandPlot>();
+                    if (l)
+                    {
+                        if (mult < 2 && l.HasUpgrade(Ids.POND_SLIME_CAPACITY))
+                            mult = 2;
+                        if (mult < 6 && l.HasUpgrade(Ids.POND_ANCIENT_BLESSING))
+                            mult = 6;
+                    }
+                }
             __result *= mult;
         }
     }
@@ -129,13 +133,17 @@ namespace PondUpgrades
         {
             var mult = 1;
             foreach (var w in __instance.waters)
-            {
-                var l = w.GetComponentInParent<LandPlot>();
-                if (l && l.HasUpgrade(Ids.POND_PLORT_CAPACITY) && mult < 2)
-                    mult = 2;
-                if (l && l.HasUpgrade(Ids.POND_ANCIENT_BLESSING) && mult < 6)
-                    mult = 6;
-            }
+                if (w)
+                {
+                    var l = w.GetComponentInParent<LandPlot>();
+                    if (l)
+                    {
+                        if (mult < 2 && l.HasUpgrade(Ids.POND_PLORT_CAPACITY))
+                            mult = 2;
+                        if (mult < 6 && l.HasUpgrade(Ids.POND_ANCIENT_BLESSING))
+                            mult = 6;
+                    }
+                }
             __result *= mult;
         }
     }

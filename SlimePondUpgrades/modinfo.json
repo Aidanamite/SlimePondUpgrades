@@ -3,6 +3,6 @@
   "name": "Pond Upgrades",
   "author": "Aidanamite",
   "description": "Allows you to upgrade the Pond",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "load_after": [ "slimeponds" ]
 }
